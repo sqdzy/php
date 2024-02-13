@@ -87,38 +87,10 @@
     </header>
 
     <main>
-      <div class="form-container">
-          <form method = "post" action = "https://httpbin.org/post">
-              <div class="form-field">
-                  <label for="username">Имя пользователя</label>
-                  <input type="text" id="username" name="username">
-              </div>
-              <div class="form-field">
-                  <label for="email">E-mail</label>
-                  <input type="email" id="email" name="email">
-              </div>
-              <div class="form-field">
-                  <label for="type">Тип обращения</label>
-                  <select id="type" name="type">
-                      <option value="complaint">Жалоба</option>
-                      <option value="suggestion">Предложение</option>
-                      <option value="thanks">Благодарность</option>
-                  </select>
-              </div>
-              <div class="form-field">
-                  <label for="message">Текст обращения</label>
-                  <textarea id="message" name="message"></textarea>
-              </div>
-              <div class="form-field">
-                  <label>Вариант ответа</label>
-                  <label><input type="checkbox" name="response[]" value="sms"> СМС</label>
-                  <label><input type="checkbox" name="response[]" value="email"> E-mail</label>
-              </div>
-              <div class="form-field">
-                  <button type="submit">Отправить</button>
-              </div>
-          </form>
-      </div>
+        <?php 
+        print_r(get_headers("http://localhost/php/lab999/form.php"));
+        ?>
+        <a href="form.html">Назад на первую</a>
     </main>
     <footer>
         <h2>Задание для самостоятельной работы</h2>
