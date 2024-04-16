@@ -7,16 +7,29 @@
 </head>
 <body>
 <?php
-$a = 27;
-$b = 12;
+$str = "baaa bbaa bbaaa baaccc";
+$pattern = "/b(a{3})/";
+$replacement = "b!";
+$result = preg_replace($pattern, $replacement, $str);
+echo $result."<br>"; 
 
-if ($a) {
-    echo "Отношение b к a: " . $b / $a;
-} else {
-    echo "a приведено к булевому типу данных: " . (bool)$a;
-}
+$str = "ahb acb aeb aeeb adcb axeb";
+$pattern = "/a.b/";
+preg_match_all($pattern, $str, $matches);
+print_r($matches[0]); 
+echo "<br>";
+
+$str = "aa aba abba abbba abbbba abbbbba";
+$pattern = "/ab+ba/";
+preg_match_all($pattern, $str, $matches);
+print_r($matches[0]); 
+echo "<br>";
+
+$str = "aaa@bbb eee7@kkk";
+$pattern = "/(\w+)@(\w+)/";
+$result = preg_replace($pattern, "$2@$1", $str);
+echo $result."<br>"; 
+
 ?>
-
-
 </body>
 </html>
