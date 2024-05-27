@@ -1,0 +1,1 @@
+Папка project должна находится в htdocs/student-231
